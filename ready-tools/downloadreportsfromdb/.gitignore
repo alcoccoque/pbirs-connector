@@ -1,0 +1,20 @@
+# .env file contains sensitive information
+.env*
+
+# report folder contains the pbix files downloaded from pbi server
+input/reports/*.pbix
+
+# temp file dir
+input/temp/*
+
+# metadata folder contains the .m script files extracted from pbix files
+input/metadata/*.m
+
+# output folder have the files to be imported by IGC
+output/*
+
+# boilerplate are stub files to debug code, feel free to create yours
+boilerplate*.*
+
+# generated .pyc files
+__pycache__

@@ -1,0 +1,5 @@
+username = "vivo"
+password = "123654"
+workstation_name = "desktop-r0v279t"
+report_virtual_directory_name = "Reports"
+report_server_virtual_directory_name = "ReportServer"

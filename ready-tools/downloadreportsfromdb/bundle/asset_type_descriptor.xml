@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<descriptor xmlns="http://www.ibm.com/iis/igc/asset-type-descriptor"
+	bundleId="PowerBI"> <!-- short ID for preventing clashes with other asset bundles -->
+
+<!-- ****************************************************************** -->
+<!-- ********* GUI Containers: Families, Trees ********** -->
+
+	<family position="2" classRefs="PbiServer, PbiFolder, PbiReport, PbiQuery, PbiQueryItem" >
+		<label key="family1" inDefaultLocale="PowerBI" />
+	</family>
+
+	<tree position="3" rootClassRefs="PbiServer">
+		<label key="tree1" inDefaultLocale="Power BI Servers" />
+	</tree>
+
+<!-- ****************************************************************** -->
+<!-- ********* Structural definitions: Classes, Attributes ********** -->
+<!-- *********    Hierarchy: PbiServer - PbiFolder - PbiReport - PbiQuery - PbiQueryItem ********** -->
+
+<!-- ********* PbiServer ********** -->
+
+	<class localId="PbiServer" dataAccessRole="None" canHaveImage="true">
+		<label key="class.PbiServer" inDefaultLocale="Power BI Server" />
+		<pluralLabel key="class-plural.PbiServer" inDefaultLocale="Power BI Servers" />
+
+		<headerSection>
+			<attribute localId="phase" type="String" editable="true">
+				<label key="attr.PbiServer.phase" inDefaultLocale="Phase" />
+
+				<validValue localId="DEV">
+					<label key="enum.Phase.DEV" inDefaultLocale="In Development" />
+				</validValue>
+				<validValue localId="TEST">
+					<label key="enum.Phase.TEST" inDefaultLocale="Undergoes Testing" />
+				</validValue>
+				<validValue localId="PROD">
+					<label key="enum.Phase.PROD" inDefaultLocale="In Production" />
+				</validValue>
+			</attribute>
+		</headerSection>
+	</class>
+
+<!-- ********* PbiFolder ********** -->
+
+	<class localId="PbiFolder" containerClassRefs="PbiServer,PbiFolder" canHaveImage="true">
+		<label key="class.PbiFolder" inDefaultLocale="Power BI Folder" />
+		<pluralLabel key="class-plural.PbiFolder" inDefaultLocale="Power BI Folders" />
+
+		<headerSection>
+			<attribute localId="version" type="String" >
+				<label key="attr.PbiFolder.version" inDefaultLocale="Version" />
+			</attribute>
+		</headerSection>
+
+		<section>
+			<label key="section.PbiFolder.Details" inDefaultLocale="Folder Details" />
+
+			<attribute localId="author" type="String">
+				<label key="attr.PbiFolder.author" inDefaultLocale="Author" />
+			</attribute>
+
+		</section>
+	</class>
+
+<!-- ********* PbiReport ********** -->
+
+<class localId="PbiReport" containerClassRefs="PbiFolder" canHaveImage="true">
+	<label key="class.PbiReport" inDefaultLocale="Power Bi Report" />
+	<pluralLabel key="class-plural.PbiReport" inDefaultLocale="PowerBI Reports" />
+
+	<headerSection>
+		<attribute localId="version" type="String" >
+			<label key="attr.PbiReport.version" inDefaultLocale="Version" />
+		</attribute>
+	</headerSection>
+
+	<section>
+		<label key="section.PbiReport.Details" inDefaultLocale="Report Details" />
+
+		<attribute localId="author" type="String">
+			<label key="attr.PbiReport.author" inDefaultLocale="Author" />
+		</attribute>
+
+	</section>
+</class>
+
+<!-- ********* PbiQuery ********** -->
+
+<class localId="PbiQuery" containerClassRefs="PbiReport" canHaveImage="true">
+	<label key="class.PbiQuery" inDefaultLocale="Power Bi Query" />
+	<pluralLabel key="class-plural.PbiQuery" inDefaultLocale="PowerBI Queries" />
+
+	<headerSection>
+		<attribute localId="version" type="String" >
+			<label key="attr.PbiQuery.version" inDefaultLocale="Version" />
+		</attribute>
+	</headerSection>
+
+	<section>
+		<label key="section.PbiQuery.Details" inDefaultLocale="Query Details" />
+
+		<attribute localId="query" type="LongText">
+			<label key="attr.PbiQuery.query" inDefaultLocale="Select clause" />
+		</attribute>
+
+	</section>
+</class>
+
+<!-- ********* PbiQueryItem ********** -->
+
+<class localId="PbiQueryItem" containerClassRefs="PbiQuery" canHaveImage="true">
+	<label key="class.PbiQueryItem" inDefaultLocale="Power BI Query Item" />
+	<pluralLabel key="class-plural.PbiQueryItem" inDefaultLocale="PowerBI Query Items" />
+
+	<headerSection>
+		<attribute localId="version" type="String" >
+			<label key="attr.PbiQueryItem.version" inDefaultLocale="Version" />
+		</attribute>
+	</headerSection>
+
+	<section>
+		<label key="section.PbiQueryItem.Details" inDefaultLocale="Query Item Details" />
+
+		<attribute localId="query" type="LongText">
+			<label key="attr.PbiQueryItem.query" inDefaultLocale="Select clause" />
+		</attribute>
+	</section>
+</class>
+
+
+
+</descriptor>

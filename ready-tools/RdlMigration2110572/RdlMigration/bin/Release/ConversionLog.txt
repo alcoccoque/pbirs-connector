@@ -1,0 +1,33 @@
+Starting the log-in window
+Starting the log-in window
+Starting the log-in window
+Log-in successfully, retrieving the reports...
+Starting conversion and uploading the reports 5/10/2022 11:14:41 AM
+Starting the log-in window
+Log-in successfully, retrieving the reports...
+Starting conversion and uploading the reports 5/10/2022 11:16:11 AM
+Starting the log-in window
+Starting the log-in window
+Log-in successfully, retrieving the reports...
+Starting conversion and uploading the reports 5/10/2022 8:48:30 PM
+Starting the log-in window
+Log-in successfully, retrieving the reports...
+Starting conversion and uploading the reports 5/10/2022 9:13:27 PM
+Starting the log-in window
+Log-in successfully, retrieving the reports...
+Starting conversion and uploading the reports 5/10/2022 9:14:53 PM
+Starting the log-in window
+Log-in successfully, retrieving the reports...
+Starting conversion and uploading the reports 5/10/2022 9:22:12 PM
+Starting the log-in window
+Log-in successfully, retrieving the reports...
+Starting conversion and uploading the reports 5/11/2022 5:43:35 AM
+SUCCESS : Firstrdl  The file is successfully uploaded
+Starting the log-in window
+Log-in successfully, retrieving the reports...
+Starting conversion and uploading the reports 5/11/2022 5:53:33 AM
+CONFLICT : Firstrdl  A report with the same name already exists in the workspace
+Starting the log-in window
+Log-in successfully, retrieving the reports...
+Starting conversion and uploading the reports 5/11/2022 6:00:34 AM
+SUCCESS : Firstrdl  The file is successfully uploaded
